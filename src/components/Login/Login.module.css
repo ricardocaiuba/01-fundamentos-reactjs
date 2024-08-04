@@ -1,0 +1,99 @@
+.login {
+  border-radius: 8px;
+  width: 500px;
+  margin: 0 auto;
+  justify-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+}
+
+.wrap {
+  background: var(--gray-600);
+  border-radius: 8px;
+  margin: 0 auto;
+  justify-items: center;
+  display: flex;
+  padding: 4.8125rem 3.4375rem 4rem 3.4375rem;
+
+}
+
+.loginFormTitle {
+  display: block;
+  font-size: 2rem;
+  line-height: 1.2;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.loginFormTitle img {
+  width: 3rem;
+}
+
+.wrapInput {
+  width: 100%;
+}
+
+.wrapInput input[type=email]  {
+  width: 100%;
+  background: var(--gray-900);
+  border: 0;
+  resize: none;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 8px;
+  color: var(--gray-100);
+  line-height: 1.4;
+  margin-top: 1rem;
+}
+
+.wrapInput input[type=password]  {
+  width: 100%;
+  background: var(--gray-900);
+  border: 0;
+  resize: none;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 8px;
+  color: var(--gray-100);
+  line-height: 1.4;
+  margin-top: 1rem;
+}
+
+.submit a{
+  background: transparent;
+  color: var(--green-500);
+  border: 1px solid var(--green-500);
+  border-radius: 8px;
+  height: 50px;
+  padding: 0 1.5rem; 
+  font-weight: bold;
+  text-decoration: none;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.4rem;
+
+  transition: color 0.1s, background-color 0.16s ;
+  margin-top: 1rem;
+}
+
+.submit a:hover {
+  background:  var(--green-500);
+  color: var(--white) ;
+ }
+
+
