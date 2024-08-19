@@ -1,28 +1,52 @@
+import {format, formatDistanceToNow} from "date-fns";
+import ptBR from "date-fns/locale/pt-BR";
+
 import { Avatar } from "../Avatar/Avatar";
 import { Comment } from "../Comment/Comment";
 
+import { ArrowFatRight } from "phosphor-react";
+
 import styles from "./Post.module.css" ;
 
-export function Post(props) {
+export function Post({author, publichedAt, content}) {1
+  const publishedDateFormattedWithIntl = Intl.DateTimeFormat("pt-BR", {
+    day: "2-digit",
+    month: "long",
+    hour: "2-digit",
+    minute: "2-digit"
+  }).format(publichedAt) ;
+
+  const publishedDateFormatted = format(publichedAt, "dd 'de' LLLL 'às' HH:mm'h'", { locale: ptBR})
+
+  const publishedDateRelativeToNow = formatDistanceToNow(publichedAt, { locale: ptBR, addSuffix: true}) ;
+
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <Avatar src="https://media.licdn.com/dms/image/D4D03AQGkPTcBy3uuhA/profile-displayphoto-shrink_800_800/0/1705054376815?e=1728518400&v=beta&t=KpY3ZR3FEohc68dgpyvnG1IEeB6jgR-PVhGMfCH67pM" />
+          <Avatar src={author.avatarUrl} />
           <div className={styles.authorInfo}>
-            <strong>{props.author}</strong>
-            <span>Desenvolvimento</span>
+            <strong>{author.name}</strong>
+            <span>{author.role}</span>
           </div>
         </div>
         <time
-          title="04 de Agosto de 2024 às 10:13"
-          dateTime="2024-08-04 10:33:45"
+          title={publishedDateFormatted}
+          dateTime={publichedAt.toISOString()}
         >
-          Publicado a 1h
+          {publishedDateRelativeToNow}
         </time>
       </header>
       <div className={styles.content}>
-        {props.content}
+        {
+          content.map((line, index) => {
+            if (line.type === "paragraph") {
+              return <p key={index}>{line.content}</p>
+            } else if (line.type === "link") {
+              return <p key={index}><a href="#"><ArrowFatRight size={20} />{line.content}</a></p>
+            }
+          }) 
+        }
       </div>
 
       <form className={styles.commentForm}>
