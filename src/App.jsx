@@ -10,7 +10,7 @@ const posts = [
   {
     id: 1,
     author: {
-      avatarUrl: "https://media.licdn.com/dms/image/D4D03AQGkPTcBy3uuhA/profile-displayphoto-shrink_800_800/0/1705054376815?e=1728518400&v=beta&t=KpY3ZR3FEohc68dgpyvnG1IEeB6jgR-PVhGMfCH67pM",
+      avatarUrl: "https://media.licdn.com/dms/image/v2/D4D03AQGkPTcBy3uuhA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1705054376815?e=1733961600&v=beta&t=8P0nDjJh8Q3Gxm5HB6CXwx-I-lg5kKxj54RLnh8yL10",
       name: "Ricardo Rodrigues",
       role: "Desenvolvimento"
     },
@@ -41,7 +41,7 @@ const posts = [
   {
     id: 2,
     author: {
-      avatarUrl: "https://media.licdn.com/dms/image/D4D03AQGkPTcBy3uuhA/profile-displayphoto-shrink_800_800/0/1705054376815?e=1728518400&v=beta&t=KpY3ZR3FEohc68dgpyvnG1IEeB6jgR-PVhGMfCH67pM",
+      avatarUrl: "https://media.licdn.com/dms/image/v2/D4D03AQGkPTcBy3uuhA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1705054376815?e=1733961600&v=beta&t=8P0nDjJh8Q3Gxm5HB6CXwx-I-lg5kKxj54RLnh8yL10",
       name: "Ricardo Rodrigues dos Santos",
       role: "Gerente de Desenvolvimento"
     },
