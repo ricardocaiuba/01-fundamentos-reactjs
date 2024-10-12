@@ -2,7 +2,12 @@ import { Avatar } from "../Avatar/Avatar";
 import styles from "./Comment.module.css"
 import { ThumbsUp, Trash } from "phosphor-react";
 
-export function Comment() {
+export function Comment({content, onDeleteComment}) {
+  function handleDeleteComment() {
+    console.log("Deletar") ;
+    onDeleteComment(content) ;
+  }
+
   return (
     <div className={styles.comment}>
       <Avatar
@@ -21,15 +26,11 @@ export function Comment() {
                 Cerca de 30m atrás
               </time>
             </div>
-            <button title="Deletar comentários">
+            <button onClick={handleDeleteComment} title="Deletar comentários">
               <Trash size={20}/>
             </button>
           </header>
-
-          <p>Infelizmente neste dia não será possível pois ainda não se completou o período aquisitivo</p>
-          <p>Por favor, informe novo requerimento com data superior a 14 de novembro.</p>
-          <p>Se atentar com inicio sempre nas segundas-feiras.</p>
-
+          <p>{content}</p>
         </div>
 
         <footer>
