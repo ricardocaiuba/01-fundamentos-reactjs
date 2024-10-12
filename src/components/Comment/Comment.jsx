@@ -7,7 +7,7 @@ export function Comment() {
     <div className={styles.comment}>
       <Avatar
         hasBorder={false}
-        src="https://media.licdn.com/dms/image/C4D03AQF-vXNVoKXYcA/profile-displayphoto-shrink_800_800/0/1658157894592?e=1728518400&v=beta&t=1sn2iD-T8qWP43iMjY9-7rRlngFAS9veacIwjHeTqP4"
+        src="https://media.licdn.com/dms/image/v2/C4D03AQF-vXNVoKXYcA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1658157894592?e=1733961600&v=beta&t=BuoqqH7SpTtvYmGwk_e5fLA77ONAccLhEcnMyC-wJW4"
       />
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
